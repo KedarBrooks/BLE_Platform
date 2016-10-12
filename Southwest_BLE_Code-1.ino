@@ -257,11 +257,13 @@ void setup() {
   ble.startAdvertising();
   Serial.println("start advertising ");
   // INTERUPT SETUP 
-  attachInterrupt(D0, handle_irq3, CHANGE);
+  attachInterrupt(D0, handle_irq3, ); // Fix required 
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
   ble.waitForEvent();
 }
+
+
 
